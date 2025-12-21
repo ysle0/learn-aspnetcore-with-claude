@@ -18,6 +18,14 @@ ASP.NET Core의 표면적인 개념부터 프레임워크 내부 동작까지, �
 
 ## 목차
 
+### Phase 0: 베스트 프랙티스
+
+| # | 섹션 | 설명 | 출처 |
+|---|------|------|------|
+| 00 | [Best Practices](./00-best-practices/) | Effective C#, More Effective C#, ASP.NET Core 가이드라인 | 📚 |
+
+> **필독**: 모든 섹션에 적용되는 핵심 원칙들입니다. 먼저 읽고 시작하세요!
+
 ### Phase 1: 핵심 기초
 
 | # | 섹션 | 설명 | 난이도 |
@@ -84,13 +92,24 @@ ASP.NET Core의 표면적인 개념부터 프레임워크 내부 동작까지, �
 1. **Kestrel과 IIS의 차이점은?** → [02-server-infrastructure](./02-server-infrastructure/)
 2. **미들웨어 파이프라인은 어떻게 동작하나요?** → [03-request-pipeline](./03-request-pipeline/)
 3. **DI의 Scoped, Transient, Singleton 차이는?** → [04-dependency-injection](./04-dependency-injection/)
-4. **async/await 내부적으로 어떻게 동작하나요?** → [10-async-programming](./10-async-programming/)
-5. **JWT 토큰 인증은 어떻게 구현하나요?** → [15-security](./15-security/)
+4. **async/await 내부적으로 어떻게 동작하나요?** → [12-tap-internals](./12-tap-internals/)
+5. **JWT 토큰 인증은 어떻게 구현하나요?** → [10-security](./10-security/)
 6. **EF Core vs Dapper 성능 차이는?** → [06-data-access](./06-data-access/)
-7. **SignalR vs gRPC 언제 사용하나요?** → [08-real-time](./08-real-time/)
+7. **SignalR vs gRPC 언제 사용하나요?** → [08-realtime](./08-realtime/)
 8. **HybridCache란 무엇인가요?** → [07-caching](./07-caching/)
-9. **Graceful Shutdown은 어떻게 구현하나요?** → [11-background-services](./11-background-services/)
-10. **Span<T>과 Memory<T>의 차이는?** → [16-extreme-optimization](./16-extreme-optimization/)
+9. **Graceful Shutdown은 어떻게 구현하나요?** → [09-background-services](./09-background-services/)
+10. **Span<T>과 Memory<T>의 차이는?** → [15-extreme-optimization](./15-extreme-optimization/)
+
+### Best Practices 핵심 요약
+
+| 원칙 | 설명 | 참조 |
+|------|------|------|
+| **var 사용** | 타입이 명확하면 var 사용 | [C# 기초](./00-best-practices/csharp-fundamentals.md) |
+| **async void 금지** | 이벤트 핸들러 제외 | [async/await](./00-best-practices/async-await.md) |
+| **CancellationToken 전파** | 모든 비동기 메서드에 전달 | [async/await](./00-best-practices/async-await.md) |
+| **IHttpClientFactory 사용** | HttpClient 직접 생성 금지 | [성능](./00-best-practices/performance.md) |
+| **Captive Dependency 주의** | Singleton에서 Scoped 주입 금지 | [ASP.NET Core](./00-best-practices/aspnetcore.md) |
+| **구조화된 로깅** | 문자열 보간 대신 템플릿 사용 | [ASP.NET Core](./00-best-practices/aspnetcore.md) |
 
 ### 예시 코드
 
