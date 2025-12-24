@@ -83,6 +83,12 @@ ASP.NET Core의 표면적인 개념부터 프레임워크 내부 동작까지, �
 | 21 | [Game Engine Integration](./21-game-engine-integration/) | Unity, Unreal Engine 연동 | ⭐⭐⭐ |
 | 22 | [Game Server References](./22-game-server-references/) | 오픈소스 레포지토리 분석 | ⭐⭐ |
 
+### Phase 8: 테스팅
+
+| # | 섹션 | 설명 | 난이도 |
+|---|------|------|--------|
+| 23 | [Testing](./23-testing/) | 유닛 테스트, 통합 테스트, HTTP/WebSocket/gRPC 테스트 | ⭐⭐⭐ |
+
 ---
 
 ## 빠른 참조
@@ -110,6 +116,16 @@ ASP.NET Core의 표면적인 개념부터 프레임워크 내부 동작까지, �
 | **IHttpClientFactory 사용** | HttpClient 직접 생성 금지 | [성능](./00-best-practices/performance.md) |
 | **Captive Dependency 주의** | Singleton에서 Scoped 주입 금지 | [ASP.NET Core](./00-best-practices/aspnetcore.md) |
 | **구조화된 로깅** | 문자열 보간 대신 템플릿 사용 | [ASP.NET Core](./00-best-practices/aspnetcore.md) |
+
+### Testing 핵심 요약
+
+| 원칙 | 설명 | 참조 |
+|------|------|------|
+| **AAA 패턴** | Arrange-Act-Assert 구조 | [Unit Testing](./23-testing/unit-testing-fundamentals.md) |
+| **xUnit 사용** | ASP.NET Core 권장 프레임워크 | [Frameworks](./23-testing/test-frameworks.md) |
+| **Mock vs Fake** | 외부 의존성은 Mock, 내부는 Fake | [Mocking](./23-testing/mocking-test-doubles.md) |
+| **WebApplicationFactory** | 통합 테스트 핵심 도구 | [Integration](./23-testing/integration-testing-fundamentals.md) |
+| **FluentAssertions** | 가독성 높은 검증 API | [Best Practices](./23-testing/best-practices.md) |
 
 ### 예시 코드
 
